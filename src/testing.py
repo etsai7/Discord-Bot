@@ -1,9 +1,11 @@
+import time
+
 import interactions
 import credentials
 import random
 
 intents = interactions.Intents.DEFAULT | interactions.Intents.MESSAGE_CONTENT
-client = interactions.Client(intents=intents)
+client = interactions.Client(intents=intents, description="Testing Description")
 
 # Slash Commands Site: https://interactions-py.github.io/interactions.py/Guides/03%20Creating%20Commands/#__tabbed_1_1
 
@@ -14,7 +16,13 @@ async def on_ready():
 
     # We're also able to use property methods to gather additional data.
     print(f"Our latency is {(client.latency)} ms.")
+    # await runLoop()
 
+
+# async def runLoop():
+#     while True:
+#         print("Sleeping for 5")
+#         time.sleep(5)
 
 # We can either pass in the event name or make the function name be the event name.
 @interactions.listen("on_message_create")
@@ -39,7 +47,8 @@ async def name_this_however_you_want(message_create: interactions.events.Message
 # The command is called with a context object, which contains information about the user, the channel, and the guild.
 # Context is what we call the described information given from an interaction response, what comes from a command.
 # The context object in this case is a class for commands, but can also be one for components if used that way.
-@interactions.slash_command(name="hello-world", description='A command that says "hello world!"',
+@interactions.slash_command(name="hello-world",
+                            description='A command that says "hello world!"',
                             scopes=[credentials.discord_guild_id])
 async def hello_world(ctx: interactions.SlashContext):
     # "ctx" is an abbreviation of the context object.
@@ -84,7 +93,8 @@ async def my_second_command_function(ctx: interactions.SlashContext):
 
 
 # Adding options
-@interactions.slash_command(name="option_command", description="A command to test with additional options",
+@interactions.slash_command(name="option_command",
+                            description="A command to test with additional options",
                             scopes=[credentials.discord_guild_id])
 @interactions.slash_option(
     name="integer_option",
@@ -114,5 +124,26 @@ async def my_command_function(ctx: interactions.SlashContext, integer_option: in
 async def add(ctx: interactions.SlashContext, one: int, two: int):
     await ctx.send(f'{one} + {two} = {one + two}')
 
+
+@interactions.slash_command(name='fruit_choices', description='Making the user select pre-populated choices',
+                            scopes=[credentials.discord_guild_id])
+@interactions.slash_option(
+    name='fruit',
+    description='Pick a fruit',
+    required=True,
+    opt_type=interactions.OptionType.STRING,
+    choices=[
+            interactions.SlashCommandChoice(name="Banana", value="Banana"),
+            interactions.SlashCommandChoice(name="Apple", value="Apple"),
+            interactions.SlashCommandChoice(name="Passion Fruit", value="Passion Fruit"),
+        ]
+)
+async def fruit_choices(ctx: interactions.SlashContext, fruit: str):
+    fruit_dict = {
+        'Banana' : 'Na na na na Banana',
+        'Apple'  : 'What a classic',
+        'Passion Fruit' : 'So much Passion or something'
+    }
+    await ctx.send(f'You picked {fruit}, {fruit_dict[fruit]}')
 
 client.start(credentials.discord_bot_token)
