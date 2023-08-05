@@ -145,5 +145,17 @@ async def fruit_choices(ctx: interactions.SlashContext, fruit: str):
         'Passion Fruit' : 'So much Passion or something'
     }
     await ctx.send(f'You picked {fruit}, {fruit_dict[fruit]}')
+@interactions.slash_command(name='at_user', description='Command to tag user',
+                            scopes=[credentials.discord_guild_id])
+@interactions.slash_option(
+    name="user",
+    description="User",
+    required=True,
+    opt_type=interactions.OptionType.USER
+)
+async def at_user(ctx: interactions.SlashContext, user: interactions.OptionType.USER):
+    print(user)
+    await ctx.send(f'Hey @{user.mention}')
+
 
 client.start(credentials.discord_bot_token)
