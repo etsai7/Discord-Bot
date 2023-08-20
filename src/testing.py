@@ -158,4 +158,49 @@ async def at_user(ctx: interactions.SlashContext, user: interactions.OptionType.
     await ctx.send(f'Hey @{user.mention}')
 
 
+@interactions.slash_command(name='many_many_many_choices', description='Command to auto suggest a bunch of choices',
+                            scopes=[credentials.discord_guild_id])
+@interactions.slash_option(
+    name='item',
+    description="Item we want to autosuggest",
+    required=True,
+    opt_type=interactions.OptionType.STRING,
+    autocomplete=True
+)
+async def many_many_many_choices(ctx: interactions.SlashContext, item: interactions.OptionType.STRING):
+    await ctx.send(f"You selected {item}")
+
+@many_many_many_choices.autocomplete("item")
+async def autocomplete(ctx: interactions.AutocompleteContext):
+    item = ctx.input_text
+
+    await ctx.send(
+        choices=[
+            {
+                "name": f"{item}a",
+                "value": f"{item}a",
+            },
+            {
+                "name": f"{item}b",
+                "value": f"{item}b",
+            },
+            {
+                "name": f"{item}c",
+                "value": f"{item}c",
+            },
+            {
+                "name": f"{item}d",
+                "value": f"{item}d",
+            },
+            {
+                "name": f"{item}e",
+                "value": f"{item}e",
+            },
+            {
+                "name": f"{item}f",
+                "value": f"{item}f",
+            },
+        ]
+    )
+
 client.start(credentials.discord_bot_token)
