@@ -200,6 +200,10 @@ async def autocomplete(ctx: interactions.AutocompleteContext):
                 "name": f"{item}f",
                 "value": f"{item}f",
             },
+            {
+                "name": f"God Potion",
+                "value": f"God Potion"
+            }
         ]
     )
 
