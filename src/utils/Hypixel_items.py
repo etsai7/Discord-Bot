@@ -15,12 +15,16 @@ def get_items_data() -> dict:
 
 def format_items_to_list_of_dicts(items_data : list) -> list:
     items_mapping_list = []
+    items_set = set()
     for items in items_data:
-        items_map = {}
         item_name = items.get('name')
+        if item_name in items_set:
+            continue
+        items_map = {}
         items_map['name'] = item_name
         items_map['value'] = item_name
         items_mapping_list.append(items_map)
+        items_set.add(item_name)
     return items_mapping_list
 
 def write_mappings_to_json(items_mapping_list: list):
@@ -43,3 +47,5 @@ def refresh_mappings():
 
     # Write mapping to json file
     write_mappings_to_json(items_mapping_list)
+
+refresh_mappings()
