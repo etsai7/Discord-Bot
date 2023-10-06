@@ -32,7 +32,7 @@ def write_mappings_to_json(items_mapping_list: list):
     json.dump(items_mapping_list, mappings_file, indent=4)
 
 # Use this function to get the dictionary
-def read_mappings_from_json() -> dict:
+def read_mappings_from_json() -> list:
     mappings_file = open(FILE_PATH, 'r')
     mappings = json.load(mappings_file)
     return mappings
