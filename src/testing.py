@@ -3,9 +3,11 @@ import time
 import interactions
 import credentials
 import random
+from src.utils import Hypixel_items
 
 intents = interactions.Intents.DEFAULT | interactions.Intents.MESSAGE_CONTENT
 client = interactions.Client(intents=intents, description="Testing Description")
+item_suggestions = None
 
 # Slash Commands Site: https://interactions-py.github.io/interactions.py/Guides/03%20Creating%20Commands/#__tabbed_1_1
 
@@ -17,6 +19,13 @@ async def on_ready():
     # We're also able to use property methods to gather additional data.
     print(f"Our latency is {(client.latency)} ms.")
     # await runLoop()
+
+    Hypixel_items.refresh_mappings()
+    global item_suggestions
+    item_suggestions = Hypixel_items.read_mappings_from_json()
+
+    # for i in range (0,10):
+    #     print(item_suggestions[i])
 
 
 # async def runLoop():
@@ -157,6 +166,14 @@ async def at_user(ctx: interactions.SlashContext, user: interactions.OptionType.
     print(user)
     await ctx.send(f'Hey @{user.mention}')
 
+@interactions.slash_command(name="timeout_test", description="Testing Discord timing out",
+                            scopes=[credentials.discord_guild_id])
+async def timeout_test(ctx: interactions.SlashContext):
+
+    await ctx.send("Going to sleep for 4 seconds")
+    time.sleep(4)
+
+    await ctx.send("Sending response after sleeping for 4 seconds")
 
 @interactions.slash_command(name='many_many_many_choices', description='Command to auto suggest a bunch of choices',
                             scopes=[credentials.discord_guild_id])
@@ -175,7 +192,8 @@ async def autocomplete(ctx: interactions.AutocompleteContext):
     item = ctx.input_text
 
     await ctx.send(
-        choices=[
+        choices=
+        [
             {
                 "name": f"{item}a",
                 "value": f"{item}a",
@@ -205,6 +223,33 @@ async def autocomplete(ctx: interactions.AutocompleteContext):
                 "value": f"God Potion"
             }
         ]
+    )
+
+@interactions.slash_command(name='hypixel_item_choices', description='Command to auto suggest a bunch of hypixel item choices',
+                            scopes=[credentials.discord_guild_id])
+@interactions.slash_option(
+    name='item',
+    description="Item we want to autosuggest",
+    required=True,
+    opt_type=interactions.OptionType.STRING,
+    autocomplete=True
+)
+async def hypixel_item_choices(ctx: interactions.SlashContext, item: interactions.OptionType.STRING):
+    print(f'Command Message - ID: {ctx.message_id} -> {ctx.message}')
+    message_sent = await ctx.send(f"You selected {item}")
+    print(f'Message Sent: {message_sent}')
+
+
+@hypixel_item_choices.autocomplete("item")
+async def autocomplete(ctx: interactions.AutocompleteContext):
+    item = ctx.input_text
+    # interactions.Message.edit()
+
+    filtered_choices = [entry for entry in item_suggestions if entry.get("name", "").startswith(item)][:25]
+    print(f'AutoComplete Message - ID: {ctx.message_id} -> {ctx.message}')
+
+    await ctx.send(
+        choices=filtered_choices
     )
 
 client.start(credentials.discord_bot_token)
