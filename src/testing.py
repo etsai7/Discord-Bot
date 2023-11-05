@@ -252,4 +252,13 @@ async def autocomplete(ctx: interactions.AutocompleteContext):
         choices=filtered_choices
     )
 
+# https://discord.com/channels/789032594456576001/1137746173600485477/1137746173600485477 - This helped figure it out
+@interactions.slash_command(name="testing", scopes=[credentials.discord_guild_id])
+async def testing(ctx: interactions.SlashContext):
+    message = await ctx.send('One Two')
+    print(message)
+    time.sleep(4)
+    await ctx.edit(message, content='Five Six')
+    # await ctx.send(ctx.message)
+
 client.start(credentials.discord_bot_token)
