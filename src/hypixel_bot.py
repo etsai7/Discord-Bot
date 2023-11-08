@@ -30,15 +30,25 @@ async def on_ready():
     autocomplete=True
 )
 @interactions.slash_option(
+    name='bin',
+    description="Item we want to auto suggest",
+    required=True,
+    opt_type=interactions.OptionType.BOOLEAN,
+    choices=[
+        interactions.SlashCommandChoice(name="True", value=True),
+        interactions.SlashCommandChoice(name="False", value=False)
+    ]
+)
+@interactions.slash_option(
     name='limit',
     description="Item we want to auto suggest",
     required=False,
     opt_type=interactions.OptionType.INTEGER
 )
-async def hypixel_item_choices(ctx: interactions.SlashContext, item: interactions.OptionType.STRING, limit: interactions.OptionType.INTEGER):
+async def hypixel_item_choices(ctx: interactions.SlashContext, item: interactions.OptionType.STRING, bin: interactions.OptionType.BOOLEAN = True, limit: interactions.OptionType.INTEGER = 1):
     print(f'Command Message - ID: {ctx.message_id} -> {ctx.message}')
     message_sent = await ctx.send(f"You selected {item} with a limit of {limit} entries, please hold while we retrieve your data")
-    await ctx.edit(message_sent, content=Auction_House.handle_auction_data_retrieval(item, limit))
+    await ctx.edit(message_sent, content=Auction_House.handle_auction_data_retrieval(item, bin, limit))
 
 
 @hypixel_item_choices.autocomplete("item")

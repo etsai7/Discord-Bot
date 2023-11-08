@@ -19,7 +19,7 @@ def get_auction_data(page):
     return auction_data
 
 # Gets all items matching given item_name
-def retrieve_item_auction_data(item_name: str):
+def retrieve_item_auction_data(item_name: str, bin: bool):
     total_pages = request_info(auction_url).get('totalPages')
     print(f'Total Pages: {total_pages}')
     start = time.time()
@@ -27,7 +27,7 @@ def retrieve_item_auction_data(item_name: str):
     for page in range(0,total_pages):
         data = get_auction_data(page)
         for d in data:
-            if d.get('item_name') == item_name or item_name in d.get('item_name'):
+            if (d.get('item_name') == item_name or item_name in d.get('item_name')) and bool(d.get('bin')) == bin:
                 hits.append(d)
 
         time.sleep(.7)
@@ -81,8 +81,8 @@ def format_to_table(sorted_data: list):
     return f"```\n{output}\n```"
 
 # Where it all begins
-def handle_auction_data_retrieval(item_name: str, limit: int):
+def handle_auction_data_retrieval(item_name: str, bin: bool, limit: int):
     # item_name = 'Greater Backpack'
-    hits = retrieve_item_auction_data(item_name)
+    hits = retrieve_item_auction_data(item_name, bin)
     filtered_and_sorted_data = format_and_sort(hits, limit)
     return format_to_table(filtered_and_sorted_data)
