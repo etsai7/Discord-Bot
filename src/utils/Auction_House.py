@@ -71,9 +71,13 @@ def get_filtered_data_as_map(hit: dict):
 
 # Format data into table output
 def format_to_table(sorted_data: list):
+    # output is the variable storing the entire "table"
     output = t2a(
+        # header - represents the label at the top of the table columns
         header=["#", "Item", "Auction ID", "Seller ID", "Price", "BIN"],
+        # body - the data to populate the table (auction results)
         body=sorted_data,
+        # style - how the lines are drawn
         style=PresetStyle.thin_compact
     )
 
