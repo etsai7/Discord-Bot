@@ -4,19 +4,21 @@ from table2ascii import table2ascii as t2a, PresetStyle
 
 auction_url = 'https://api.hypixel.net/skyblock/auctions'
 
+
 # Returns GET request response from url
 def request_info(url: str):
     r = requests.get(url)
     return r.json()
 
+
 # Returns a list of all active auctions
 def get_auction_data(page):
-
     page = request_info(f"{auction_url}?page={page}")
 
     auction_data = page.get("auctions")
 
     return auction_data
+
 
 # Gets all items matching given item_name
 def retrieve_item_auction_data(item_name: str, bin: bool):
@@ -24,7 +26,7 @@ def retrieve_item_auction_data(item_name: str, bin: bool):
     print(f'Total Pages: {total_pages}')
     start = time.time()
     hits = []
-    for page in range(0,total_pages):
+    for page in range(0, total_pages):
         data = get_auction_data(page)
         for d in data:
             if (d.get('item_name') == item_name or item_name in d.get('item_name')) and bool(d.get('bin')) == bin:
@@ -33,13 +35,14 @@ def retrieve_item_auction_data(item_name: str, bin: bool):
         time.sleep(.7)
 
     end = time.time()
-    print(f'Retrieval and Processing Time Elapsed: {end-start}')
+    print(f'Retrieval and Processing Time Elapsed: {end - start}')
     return hits
+
 
 # Format the data into list of lists and sort by Price
 def format_and_sort(hits: list, limit: int = 10):
     # Pull only desired field values
-    refined_data_list = [get_filtered_data_as_list(hit) for hit in hits ]
+    refined_data_list = [get_filtered_data_as_list(hit) for hit in hits]
 
     sorted_refined_data_list = sorted(refined_data_list, key=lambda x: x[3])  # Sort by Price, 2nd item in list
 
@@ -47,9 +50,10 @@ def format_and_sort(hits: list, limit: int = 10):
 
     # Insert row number for table
     for i in range(len(sorted_refined_data_list)):
-        sorted_refined_data_list[i].insert(0,i+1)
+        sorted_refined_data_list[i].insert(0, i + 1)
 
     return sorted_refined_data_list[:limit]
+
 
 # Grabs only relevant data we want from the api
 def get_filtered_data_as_list(hit: dict):
@@ -60,6 +64,7 @@ def get_filtered_data_as_list(hit: dict):
     bin = hit.get('bin')
     return [item_name, auction_uuid, seller, starting_bid, bin]
 
+
 # Currently not used
 def get_filtered_data_as_map(hit: dict):
     entry = {}
@@ -68,6 +73,7 @@ def get_filtered_data_as_map(hit: dict):
     entry['Price'] = hit.get('starting_bid')
     entry['BIN'] = hit.get('bin')
     return entry
+
 
 # Format data into table output
 def format_to_table(sorted_data: list):
@@ -83,6 +89,7 @@ def format_to_table(sorted_data: list):
 
     print(output)
     return f"```\n{output}\n```"
+
 
 # Where it all begins
 def handle_auction_data_retrieval(item_name: str, bin: bool, limit: int):
