@@ -59,14 +59,14 @@ def format_and_sort(hits: list, limit: int = 10):
 def get_filtered_data_as_list(hit: dict):
     item_name = hit.get('item_name')
     auction_uuid = hit.get('uuid')
-    seller = request_info(f'https://sessionserver.mojang.com/session/minecraft/profile/{hit.get("auctioneer")}')['name']
-    starting_bid = hit.get('starting_bid')
+    seller = request_info(f'https://sessionserver.mojang.com/session/minecraft/profile/{hit.get("auctioneer")}').get('name')
+    starting_bid = f"{hit.get('starting_bid'):,}"
     bin = hit.get('bin')
     return [item_name, auction_uuid, seller, starting_bid, bin]
 
 
 # Currently not used
-def get_filtered_data_as_map(hit: dict):
+def get_filtered_data_as_map(hit: dict) -> dict:
     entry = {}
     entry['Auction ID'] = hit.get('uuid')
     entry['Seller ID'] = hit.get('auctioneer')
@@ -76,7 +76,7 @@ def get_filtered_data_as_map(hit: dict):
 
 
 # Format data into table output
-def format_to_table(sorted_data: list):
+def format_to_table(sorted_data: list) -> str:
     # output is the variable storing the entire "table"
     output = t2a(
         # header - represents the label at the top of the table columns
@@ -92,7 +92,7 @@ def format_to_table(sorted_data: list):
 
 
 # Where it all begins
-def handle_auction_data_retrieval(item_name: str, bin: bool, limit: int):
+def handle_auction_data_retrieval(item_name: str, bin: bool, limit: int) -> str:
     # item_name = 'Greater Backpack'
     hits = retrieve_item_auction_data(item_name, bin)
     filtered_and_sorted_data = format_and_sort(hits, limit)
