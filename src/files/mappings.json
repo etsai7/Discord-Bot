@@ -140,6 +140,14 @@
         "value": "Arachne Crystal"
     },
     {
+        "name": "Anita's Talisman",
+        "value": "Anita's Talisman"
+    },
+    {
+        "name": "Pesthunter Ring",
+        "value": "Pesthunter Ring"
+    },
+    {
         "name": "Cocoa Chopper",
         "value": "Cocoa Chopper"
     },
@@ -160,6 +168,10 @@
         "value": "Jacob's Ticket"
     },
     {
+        "name": "Anita's Artifact",
+        "value": "Anita's Artifact"
+    },
+    {
         "name": "Nether Wart Pouch",
         "value": "Nether Wart Pouch"
     },
@@ -168,12 +180,24 @@
         "value": "Cactus Knife"
     },
     {
+        "name": "Anita's Ring",
+        "value": "Anita's Ring"
+    },
+    {
         "name": "Basket of Seeds",
         "value": "Basket of Seeds"
     },
     {
         "name": "Fungi Cutter",
         "value": "Fungi Cutter"
+    },
+    {
+        "name": "Pesthunter Badge",
+        "value": "Pesthunter Badge"
+    },
+    {
+        "name": "Pesthunter Artifact",
+        "value": "Pesthunter Artifact"
     },
     {
         "name": "Hoe of Great Tilling",
@@ -278,6 +302,10 @@
     {
         "name": "Medium Combat Sack",
         "value": "Medium Combat Sack"
+    },
+    {
+        "name": "Garden Sack",
+        "value": "Garden Sack"
     },
     {
         "name": "Silver Trophy Fishing Sack",
@@ -3132,6 +3160,10 @@
         "value": "Coins on Fire!"
     },
     {
+        "name": "Golden Collar",
+        "value": "Golden Collar"
+    },
+    {
         "name": "Floral Lamppost",
         "value": "Floral Lamppost"
     },
@@ -3272,6 +3304,10 @@
         "value": "Perfect Helmet - Tier IV"
     },
     {
+        "name": "Perfect Boots - Tier XIII",
+        "value": "Perfect Boots - Tier XIII"
+    },
+    {
         "name": "Perfect Chestplate - Tier VII",
         "value": "Perfect Chestplate - Tier VII"
     },
@@ -3352,8 +3388,16 @@
         "value": "Perfect Helmet - Tier VII"
     },
     {
+        "name": "Perfect Chestplate - Tier XIII",
+        "value": "Perfect Chestplate - Tier XIII"
+    },
+    {
         "name": "Perfect Boots - Tier X",
         "value": "Perfect Boots - Tier X"
+    },
+    {
+        "name": "Perfect Helmet - Tier XIII",
+        "value": "Perfect Helmet - Tier XIII"
     },
     {
         "name": "Perfect Helmet - Tier III",
@@ -3426,6 +3470,10 @@
     {
         "name": "Perfect Helmet - Tier XII",
         "value": "Perfect Helmet - Tier XII"
+    },
+    {
+        "name": "Perfect Leggings - Tier XIII",
+        "value": "Perfect Leggings - Tier XIII"
     },
     {
         "name": "Perfect Leggings - Tier XI",
@@ -3516,6 +3564,122 @@
         "value": "Undead \u0f15 Century Cake"
     },
     {
+        "name": "Rod of Champions",
+        "value": "Rod of Champions"
+    },
+    {
+        "name": "Yeti Rod",
+        "value": "Yeti Rod"
+    },
+    {
+        "name": "Starter Lava Rod",
+        "value": "Starter Lava Rod"
+    },
+    {
+        "name": "Rod of Legends",
+        "value": "Rod of Legends"
+    },
+    {
+        "name": "Hellfire Rod",
+        "value": "Hellfire Rod"
+    },
+    {
+        "name": "Ice Rod",
+        "value": "Ice Rod"
+    },
+    {
+        "name": "Phantom Rod",
+        "value": "Phantom Rod"
+    },
+    {
+        "name": "Auger Rod",
+        "value": "Auger Rod"
+    },
+    {
+        "name": "Magma Rod",
+        "value": "Magma Rod"
+    },
+    {
+        "name": "Challenging Rod",
+        "value": "Challenging Rod"
+    },
+    {
+        "name": "Hot Bait",
+        "value": "Hot Bait"
+    },
+    {
+        "name": "Frozen Bait",
+        "value": "Frozen Bait"
+    },
+    {
+        "name": "Fish Bait",
+        "value": "Fish Bait"
+    },
+    {
+        "name": "Minnow Bait",
+        "value": "Minnow Bait"
+    },
+    {
+        "name": "Spooky Bait",
+        "value": "Spooky Bait"
+    },
+    {
+        "name": "Dark Bait",
+        "value": "Dark Bait"
+    },
+    {
+        "name": "Light Bait",
+        "value": "Light Bait"
+    },
+    {
+        "name": "Corrupted Bait",
+        "value": "Corrupted Bait"
+    },
+    {
+        "name": "Carrot Bait",
+        "value": "Carrot Bait"
+    },
+    {
+        "name": "Blessed Bait",
+        "value": "Blessed Bait"
+    },
+    {
+        "name": "Whale Bait",
+        "value": "Whale Bait"
+    },
+    {
+        "name": "Ice Bait",
+        "value": "Ice Bait"
+    },
+    {
+        "name": "Spiked Bait",
+        "value": "Spiked Bait"
+    },
+    {
+        "name": "Shredder",
+        "value": "Shredder"
+    },
+    {
+        "name": "Speedster Rod",
+        "value": "Speedster Rod"
+    },
+    {
+        "name": "Farmer's Rod",
+        "value": "Farmer's Rod"
+    },
+    {
+        "name": "Inferno Rod",
+        "value": "Inferno Rod"
+    },
+    {
+        "name": "Sponge Rod",
+        "value": "Sponge Rod"
+    },
+    {
+        "name": "Prismarine Rod",
+        "value": "Prismarine Rod"
+    },
+    {
         "name": "Talisman of the Century",
         "value": "Talisman of the Century"
     },
@@ -3562,6 +3726,10 @@
     {
         "name": "Complete Century Cake Bundle",
         "value": "Complete Century Cake Bundle"
+    },
+    {
+        "name": "Ice Cube",
+        "value": "Ice Cube"
     },
     {
         "name": "Medium Gemstone Sack",
@@ -3760,8 +3928,20 @@
         "value": "Great Spook Talisman"
     },
     {
+        "name": "Nightmare Nullifier",
+        "value": "Nightmare Nullifier"
+    },
+    {
         "name": "Sweet Flesh",
         "value": "Sweet Flesh"
+    },
+    {
+        "name": "Expired Pumpkin",
+        "value": "Expired Pumpkin"
+    },
+    {
+        "name": "Scare Fragment",
+        "value": "Scare Fragment"
     },
     {
         "name": "Great Spook Boots",
@@ -3796,6 +3976,14 @@
         "value": "Poisoned Candy"
     },
     {
+        "name": "Dark Candy",
+        "value": "Dark Candy"
+    },
+    {
+        "name": "Black Woolen Yarn",
+        "value": "Black Woolen Yarn"
+    },
+    {
         "name": "Great Spook Helmet",
         "value": "Great Spook Helmet"
     },
@@ -3806,6 +3994,10 @@
     {
         "name": "Great Spook Ring",
         "value": "Great Spook Ring"
+    },
+    {
+        "name": "Sewer Fish",
+        "value": "Sewer Fish"
     },
     {
         "name": "Wind Chimes",
@@ -4172,6 +4364,18 @@
         "value": "Blue Shark Tooth"
     },
     {
+        "name": "Bear Bench",
+        "value": "Bear Bench"
+    },
+    {
+        "name": "Bear Chair",
+        "value": "Bear Chair"
+    },
+    {
+        "name": "Pirate Cutout",
+        "value": "Pirate Cutout"
+    },
+    {
         "name": "10th Anniversary Podium",
         "value": "10th Anniversary Podium"
     },
@@ -4194,6 +4398,10 @@
     {
         "name": "Witch Hat",
         "value": "Witch Hat"
+    },
+    {
+        "name": "Reanimated Painting",
+        "value": "Reanimated Painting"
     },
     {
         "name": "Bundled Snowman",
@@ -4232,12 +4440,24 @@
         "value": "Rocking Chair"
     },
     {
+        "name": "Mimic Chest",
+        "value": "Mimic Chest"
+    },
+    {
         "name": "Festive Mailbox",
         "value": "Festive Mailbox"
     },
     {
         "name": "Crab",
         "value": "Crab"
+    },
+    {
+        "name": "Bear Bed",
+        "value": "Bear Bed"
+    },
+    {
+        "name": "Bear Side Table",
+        "value": "Bear Side Table"
     },
     {
         "name": "Hammock",
@@ -4272,12 +4492,24 @@
         "value": "Wishing Well"
     },
     {
+        "name": "Bear Bookshelf",
+        "value": "Bear Bookshelf"
+    },
+    {
         "name": "Holiday Train",
         "value": "Holiday Train"
     },
     {
+        "name": "Skeleton Chair",
+        "value": "Skeleton Chair"
+    },
+    {
         "name": "Hot Chocolate and Cookies",
         "value": "Hot Chocolate and Cookies"
+    },
+    {
+        "name": "Pumpkin Candy Handout",
+        "value": "Pumpkin Candy Handout"
     },
     {
         "name": "Advent Calendar Display",
@@ -4340,12 +4572,20 @@
         "value": "Collection Display"
     },
     {
+        "name": "Secret Bingo Card",
+        "value": "Secret Bingo Card"
+    },
+    {
         "name": "Extreme Bingo Card",
         "value": "Extreme Bingo Card"
     },
     {
         "name": "Bingo Blaster",
         "value": "Bingo Blaster"
+    },
+    {
+        "name": "Bingo's Secrets",
+        "value": "Bingo's Secrets"
     },
     {
         "name": "A\u24b7iphone",
@@ -4570,10 +4810,6 @@
     {
         "name": "Celeste Leggings",
         "value": "Celeste Leggings"
-    },
-    {
-        "name": "Hot Bait",
-        "value": "Hot Bait"
     },
     {
         "name": "Titan's Helmet",
@@ -4834,6 +5070,10 @@
     {
         "name": "Fancy Sword",
         "value": "Fancy Sword"
+    },
+    {
+        "name": "Pure Mithril Gem",
+        "value": "Pure Mithril Gem"
     },
     {
         "name": "Spruce Leaves",
@@ -5316,6 +5556,10 @@
         "value": "Green Stained Glass Pane"
     },
     {
+        "name": "Perfectly Cut Diamond",
+        "value": "Perfectly Cut Diamond"
+    },
+    {
         "name": "Gold Ingot",
         "value": "Gold Ingot"
     },
@@ -5704,6 +5948,10 @@
         "value": "Portable Builder"
     },
     {
+        "name": "Worm Bait",
+        "value": "Worm Bait"
+    },
+    {
         "name": "Black Widow Skin",
         "value": "Black Widow Skin"
     },
@@ -6004,10 +6252,6 @@
         "value": "Birch Sapling"
     },
     {
-        "name": "Fish Bait",
-        "value": "Fish Bait"
-    },
-    {
         "name": "Skeleton's Helmet",
         "value": "Skeleton's Helmet"
     },
@@ -6122,6 +6366,10 @@
     {
         "name": "Enchanted Packed Ice",
         "value": "Enchanted Packed Ice"
+    },
+    {
+        "name": "Firework Rocket",
+        "value": "Firework Rocket"
     },
     {
         "name": "Skeleton Lord Bow",
@@ -6352,10 +6600,6 @@
         "value": "Milk and Cookies"
     },
     {
-        "name": "Minnow Bait",
-        "value": "Minnow Bait"
-    },
-    {
         "name": "Berry Bush",
         "value": "Berry Bush"
     },
@@ -6450,6 +6694,10 @@
     {
         "name": "Dandelion",
         "value": "Dandelion"
+    },
+    {
+        "name": "%%green%%Swappable Preview %%gray%%(Click)",
+        "value": "%%green%%Swappable Preview %%gray%%(Click)"
     },
     {
         "name": "Gemstone Drill LT-522",
@@ -8284,10 +8532,6 @@
         "value": "Brick Stairs"
     },
     {
-        "name": "Firework Rocket",
-        "value": "Firework Rocket"
-    },
-    {
         "name": "Jukebox",
         "value": "Jukebox"
     },
@@ -8480,8 +8724,8 @@
         "value": "Puffer Fish Skin"
     },
     {
-        "name": "Enchanted Cocoa Bean",
-        "value": "Enchanted Cocoa Bean"
+        "name": "Enchanted Cocoa Beans",
+        "value": "Enchanted Cocoa Beans"
     },
     {
         "name": "Day Crystal",
@@ -9112,10 +9356,6 @@
         "value": "Scoville Belt"
     },
     {
-        "name": "Spooky Bait",
-        "value": "Spooky Bait"
-    },
-    {
         "name": "Bouncy Arrow",
         "value": "Bouncy Arrow"
     },
@@ -9696,10 +9936,6 @@
         "value": "Fishing Rod"
     },
     {
-        "name": "Dark Bait",
-        "value": "Dark Bait"
-    },
-    {
         "name": "Red Sandstone",
         "value": "Red Sandstone"
     },
@@ -9722,10 +9958,6 @@
     {
         "name": "Ember Leggings",
         "value": "Ember Leggings"
-    },
-    {
-        "name": "Light Bait",
-        "value": "Light Bait"
     },
     {
         "name": "Diamond Refinery",
@@ -10500,10 +10732,6 @@
         "value": "Diver's Trunks"
     },
     {
-        "name": "\u00a7cBottle of Jyrre",
-        "value": "\u00a7cBottle of Jyrre"
-    },
-    {
         "name": "Golden Helmet",
         "value": "Golden Helmet"
     },
@@ -10858,6 +11086,10 @@
     {
         "name": "Worm the Fish",
         "value": "Worm the Fish"
+    },
+    {
+        "name": "Intimidation Relic",
+        "value": "Intimidation Relic"
     },
     {
         "name": "Healing Talisman",
@@ -11592,10 +11824,6 @@
         "value": "Hunk of Ice"
     },
     {
-        "name": "Corrupted Bait",
-        "value": "Corrupted Bait"
-    },
-    {
         "name": "Sea Lantern",
         "value": "Sea Lantern"
     },
@@ -11646,10 +11874,6 @@
     {
         "name": "Potato Crown",
         "value": "Potato Crown"
-    },
-    {
-        "name": "Carrot Bait",
-        "value": "Carrot Bait"
     },
     {
         "name": "Rock Gemstone",
@@ -11774,10 +11998,6 @@
     {
         "name": "Livid Fragment",
         "value": "Livid Fragment"
-    },
-    {
-        "name": "Blessed Bait",
-        "value": "Blessed Bait"
     },
     {
         "name": "Magmafish Hat",
@@ -12224,10 +12444,6 @@
         "value": "Blaze Powder"
     },
     {
-        "name": "Whale Bait",
-        "value": "Whale Bait"
-    },
-    {
         "name": "Saphhire Crystal",
         "value": "Saphhire Crystal"
     },
@@ -12516,10 +12732,6 @@
         "value": "Enchanted Red Mushroom"
     },
     {
-        "name": "Ice Bait",
-        "value": "Ice Bait"
-    },
-    {
         "name": "Medium Storage",
         "value": "Medium Storage"
     },
@@ -12618,6 +12830,10 @@
     {
         "name": "Water Hydra Head",
         "value": "Water Hydra Head"
+    },
+    {
+        "name": "Secret Tracker 3000",
+        "value": "Secret Tracker 3000"
     },
     {
         "name": "Textbook",
@@ -13616,10 +13832,6 @@
         "value": "Fireball"
     },
     {
-        "name": "Spiked Bait",
-        "value": "Spiked Bait"
-    },
-    {
         "name": "Zombie Soldier Chestplate",
         "value": "Zombie Soldier Chestplate"
     },
@@ -13842,6 +14054,10 @@
     {
         "name": "Inferno Fuel Block",
         "value": "Inferno Fuel Block"
+    },
+    {
+        "name": "Very Crude Gabagool",
+        "value": "Very Crude Gabagool"
     },
     {
         "name": "Heavy Gabagool",
@@ -14552,70 +14768,6 @@
         "value": "Tropical Bird 1 Minion Skin"
     },
     {
-        "name": "Rod of Champions",
-        "value": "Rod of Champions"
-    },
-    {
-        "name": "Yeti Rod",
-        "value": "Yeti Rod"
-    },
-    {
-        "name": "Starter Lava Rod",
-        "value": "Starter Lava Rod"
-    },
-    {
-        "name": "Rod of Legends",
-        "value": "Rod of Legends"
-    },
-    {
-        "name": "Hellfire Rod",
-        "value": "Hellfire Rod"
-    },
-    {
-        "name": "Ice Rod",
-        "value": "Ice Rod"
-    },
-    {
-        "name": "Phantom Rod",
-        "value": "Phantom Rod"
-    },
-    {
-        "name": "Auger Rod",
-        "value": "Auger Rod"
-    },
-    {
-        "name": "Magma Rod",
-        "value": "Magma Rod"
-    },
-    {
-        "name": "Challenging Rod",
-        "value": "Challenging Rod"
-    },
-    {
-        "name": "Shredder",
-        "value": "Shredder"
-    },
-    {
-        "name": "Speedster Rod",
-        "value": "Speedster Rod"
-    },
-    {
-        "name": "Farmer's Rod",
-        "value": "Farmer's Rod"
-    },
-    {
-        "name": "Inferno Rod",
-        "value": "Inferno Rod"
-    },
-    {
-        "name": "Sponge Rod",
-        "value": "Sponge Rod"
-    },
-    {
-        "name": "Prismarine Rod",
-        "value": "Prismarine Rod"
-    },
-    {
         "name": "Travel Scroll to Dragontail",
         "value": "Travel Scroll to Dragontail"
     },
@@ -14724,12 +14876,40 @@
         "value": "Tropical Bird 2 Minion Skin"
     },
     {
+        "name": "InfiniVacuum\u2122",
+        "value": "InfiniVacuum\u2122"
+    },
+    {
+        "name": "InfiniVacuum\u2122 Hooverius",
+        "value": "InfiniVacuum\u2122 Hooverius"
+    },
+    {
+        "name": "SkyMart Vacuum",
+        "value": "SkyMart Vacuum"
+    },
+    {
+        "name": "SkyMart Hyper Vacuum",
+        "value": "SkyMart Hyper Vacuum"
+    },
+    {
+        "name": "SkyMart Turbo Vacuum",
+        "value": "SkyMart Turbo Vacuum"
+    },
+    {
         "name": "Overgrown Grass",
         "value": "Overgrown Grass"
     },
     {
+        "name": "Beady Eyes",
+        "value": "Beady Eyes"
+    },
+    {
         "name": "Large Walnut",
         "value": "Large Walnut"
+    },
+    {
+        "name": "Clipped Wings",
+        "value": "Clipped Wings"
     },
     {
         "name": "Flowering Bouquet",
@@ -14928,6 +15108,86 @@
         "value": "Copper"
     },
     {
+        "name": "Chirping Stereo",
+        "value": "Chirping Stereo"
+    },
+    {
+        "name": "Wriggling Larva",
+        "value": "Wriggling Larva"
+    },
+    {
+        "name": "Slow and Groovy Vinyl",
+        "value": "Slow and Groovy Vinyl"
+    },
+    {
+        "name": "Sprayonator",
+        "value": "Sprayonator"
+    },
+    {
+        "name": "Dung",
+        "value": "Dung"
+    },
+    {
+        "name": "Cicada Symphony Vinyl",
+        "value": "Cicada Symphony Vinyl"
+    },
+    {
+        "name": "Earthworm Ensemble Vinyl",
+        "value": "Earthworm Ensemble Vinyl"
+    },
+    {
+        "name": "Pretty Fly Vinyl",
+        "value": "Pretty Fly Vinyl"
+    },
+    {
+        "name": "Pest Repellent MAX",
+        "value": "Pest Repellent MAX"
+    },
+    {
+        "name": "Honey Jar",
+        "value": "Honey Jar"
+    },
+    {
+        "name": "Atmospheric Filter",
+        "value": "Atmospheric Filter"
+    },
+    {
+        "name": "DynaMITES Vinyl",
+        "value": "DynaMITES Vinyl"
+    },
+    {
+        "name": "Pest Repellent",
+        "value": "Pest Repellent"
+    },
+    {
+        "name": "Wings of Harmony Vinyl",
+        "value": "Wings of Harmony Vinyl"
+    },
+    {
+        "name": "Cricket Choir Vinyl",
+        "value": "Cricket Choir Vinyl"
+    },
+    {
+        "name": "Plant Matter",
+        "value": "Plant Matter"
+    },
+    {
+        "name": "Bookworm's Favorite Book",
+        "value": "Bookworm's Favorite Book"
+    },
+    {
+        "name": "Buzzin' Beats Vinyl",
+        "value": "Buzzin' Beats Vinyl"
+    },
+    {
+        "name": "Rodent Revolution Vinyl",
+        "value": "Rodent Revolution Vinyl"
+    },
+    {
+        "name": "Not Just a Pest Vinyl",
+        "value": "Not Just a Pest Vinyl"
+    },
+    {
         "name": "Box of Seeds",
         "value": "Box of Seeds"
     },
@@ -14950,6 +15210,70 @@
     {
         "name": "Hoe of Greatest Tilling",
         "value": "Hoe of Greatest Tilling"
+    },
+    {
+        "name": "Mushroom Barn Skin",
+        "value": "Mushroom Barn Skin"
+    },
+    {
+        "name": "Castle Barn Skin",
+        "value": "Castle Barn Skin"
+    },
+    {
+        "name": "Town Hall Barn Skin",
+        "value": "Town Hall Barn Skin"
+    },
+    {
+        "name": "Pinwheel House Barn Skin",
+        "value": "Pinwheel House Barn Skin"
+    },
+    {
+        "name": "Winter Homestead Barn Skin",
+        "value": "Winter Homestead Barn Skin"
+    },
+    {
+        "name": "Tavern Barn Skin",
+        "value": "Tavern Barn Skin"
+    },
+    {
+        "name": "Autumn Hut Barn Skin",
+        "value": "Autumn Hut Barn Skin"
+    },
+    {
+        "name": "Cube Barn Skin",
+        "value": "Cube Barn Skin"
+    },
+    {
+        "name": "Trading Post Barn Skin",
+        "value": "Trading Post Barn Skin"
+    },
+    {
+        "name": "Windmill Barn Skin",
+        "value": "Windmill Barn Skin"
+    },
+    {
+        "name": "Jerry Barn Skin",
+        "value": "Jerry Barn Skin"
+    },
+    {
+        "name": "Bamboo Barn Skin",
+        "value": "Bamboo Barn Skin"
+    },
+    {
+        "name": "Hive Barn Skin",
+        "value": "Hive Barn Skin"
+    },
+    {
+        "name": "Count's Manor Barn Skin",
+        "value": "Count's Manor Barn Skin"
+    },
+    {
+        "name": "Cozy Cottage Barn Skin",
+        "value": "Cozy Cottage Barn Skin"
+    },
+    {
+        "name": "Frog Barn Skin",
+        "value": "Frog Barn Skin"
     },
     {
         "name": "Builder's Ruler",
@@ -15040,6 +15364,14 @@
         "value": "Snow Necklace"
     },
     {
+        "name": "Winter Fragment",
+        "value": "Winter Fragment"
+    },
+    {
+        "name": "%%red%%Volcanic Rock",
+        "value": "%%red%%Volcanic Rock"
+    },
+    {
         "name": "Nutcracker Helmet",
         "value": "Nutcracker Helmet"
     },
@@ -15080,6 +15412,10 @@
         "value": "Walnut"
     },
     {
+        "name": "Expensive Toy",
+        "value": "Expensive Toy"
+    },
+    {
         "name": "Blue Gift Talisman",
         "value": "Blue Gift Talisman"
     },
@@ -15112,6 +15448,14 @@
         "value": "Glacial Talisman"
     },
     {
+        "name": "\u00a7cLost Bottle of Jyrre",
+        "value": "\u00a7cLost Bottle of Jyrre"
+    },
+    {
+        "name": "Refined Bottle of Jyrre",
+        "value": "Refined Bottle of Jyrre"
+    },
+    {
         "name": "Terry's Snowglobe",
         "value": "Terry's Snowglobe"
     },
@@ -15126,6 +15470,22 @@
     {
         "name": "Salt Cube",
         "value": "Salt Cube"
+    },
+    {
+        "name": "Magic Top Hat",
+        "value": "Magic Top Hat"
+    },
+    {
+        "name": "Einary's Red Hoodie",
+        "value": "Einary's Red Hoodie"
+    },
+    {
+        "name": "Gift of Learning",
+        "value": "Gift of Learning"
+    },
+    {
+        "name": "\u00a7cBottle of Jyrre",
+        "value": "\u00a7cBottle of Jyrre"
     },
     {
         "name": "Frozen Scythe",
@@ -15980,16 +16340,24 @@
         "value": "End Stone Bow"
     },
     {
-        "name": "Aspect of the Draconic",
-        "value": "Aspect of the Draconic"
-    },
-    {
         "name": "Ender Bow",
         "value": "Ender Bow"
     },
     {
         "name": "Ritual Residue",
         "value": "Ritual Residue"
+    },
+    {
+        "name": "%%green%%Ballista Fuel Cell",
+        "value": "%%green%%Ballista Fuel Cell"
+    },
+    {
+        "name": "%%green%%Elle's Supplies",
+        "value": "%%green%%Elle's Supplies"
+    },
+    {
+        "name": "Glowing Mush Mixin",
+        "value": "Glowing Mush Mixin"
     },
     {
         "name": "Glowing Mushroom",
