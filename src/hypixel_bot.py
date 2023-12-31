@@ -4,9 +4,12 @@ import credentials
 from src.utils import Hypixel_items
 from src.utils import Auction_House
 
+from interactions import Color
+
 intents = interactions.Intents.DEFAULT | interactions.Intents.MESSAGE_CONTENT
 client = interactions.Client(intents=intents, description="Testing Description")
 item_suggestions = None
+
 
 @interactions.listen()
 async def on_ready():
@@ -20,7 +23,9 @@ async def on_ready():
     global item_suggestions
     item_suggestions = Hypixel_items.read_mappings_from_json()
 
-@interactions.slash_command(name='hypixel_item_choices', description='Command to auto suggest a bunch of hypixel item choices',
+
+@interactions.slash_command(name='hypixel_item_choices',
+                            description='Command to auto suggest a bunch of hypixel item choices',
                             scopes=[credentials.discord_guild_id])
 @interactions.slash_option(
     name='item',
@@ -45,9 +50,12 @@ async def on_ready():
     required=False,
     opt_type=interactions.OptionType.INTEGER
 )
-async def hypixel_item_choices(ctx: interactions.SlashContext, item: interactions.OptionType.STRING, bin: interactions.OptionType.BOOLEAN = True, limit: interactions.OptionType.INTEGER = 1):
+async def hypixel_item_choices(ctx: interactions.SlashContext, item: interactions.OptionType.STRING,
+                               bin: interactions.OptionType.BOOLEAN = True, limit: interactions.OptionType.INTEGER = 1):
     print(f'Command Message - ID: {ctx.message_id} -> {ctx.message}')
-    message_sent = await ctx.send(f"You selected {item} with a limit of {limit} entries, please hold while we retrieve your data")
+    message_sent = await ctx.send(
+        f"You selected {item} with a limit of {limit} entries, please hold while we retrieve your data")
+
     await ctx.edit(message_sent, content=Auction_House.handle_auction_data_retrieval(item, bin, limit))
 
 
@@ -63,5 +71,5 @@ async def autocomplete(ctx: interactions.AutocompleteContext):
     )
 
 
-
+client.load_extension("exts.test_ext")
 client.start(credentials.discord_bot_token)
