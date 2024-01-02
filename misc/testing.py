@@ -1,7 +1,7 @@
 import time
 
 import interactions
-import credentials
+import src.credentials as credentials
 import random
 from src.utils import Hypixel_items
 
