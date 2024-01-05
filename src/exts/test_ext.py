@@ -29,7 +29,22 @@ class TestExtension(Extension):
 
     @testExtension.subcommand(sub_cmd_name='testhyperlink',
                               sub_cmd_description='Command to create a body of text with Hyperlink')
-    async def testHyperLink(selfself, ctx: SlashContext):
+    async def testHyperLink(self, ctx: SlashContext):
         await ctx.send('Go to [Google](https://www.google.com/)')
 
-# Bongo Cat
+    # Bongo Cat
+    @testExtension.subcommand(sub_cmd_name='bongocat',
+                              sub_cmd_description='Command for a Bongo Cat Embed')
+    async def testBongoCatEmbed(self, ctx: SlashContext):
+        embed = Embed(
+            title='🥁 Bongo Cat',
+            color=Color.from_rgb(27, 193, 87),
+            # description="Bing Bong Bongo Cat at your Service",
+            timestamp=Timestamp.now(),
+            url='https://bongo.cat/'
+        )
+        # embed.set_thumbnail('https://i0.wp.com/boingboing.net/wp-content/uploads/2020/10/bongo-cat.jpg?fit=1380%2C903'
+        #                     '&ssl=1')
+        embed.set_thumbnail('https://media2.giphy.com/media/sthmCnCpfr8M8jtTQy/giphy.gif')
+        embed.add_field('*Bing Bong*', 'Bongo Cat at your service')
+        await ctx.send(embeds=embed)
