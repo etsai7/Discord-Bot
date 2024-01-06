@@ -5,12 +5,15 @@ import src.credentials as credentials
 class TestExtension(Extension):
     @slash_command(name='testing',
                    scopes=[credentials.discord_guild_id],
-                   sub_cmd_name='testext',
+                   sub_cmd_name='test_info',
                    sub_cmd_description='Command to auto suggest a bunch of hypixel item choices')
     async def testExtension(self, ctx: SlashContext):
-        await ctx.send("Hello Test Extension")
+        cmds = ('`test_info` - List of all the functions under the testing group\n`test_embed` - Testing default embed '
+                'and layouts\n`test_hyperlink` - Hyperlinking a msg, using markdown format\n`bongocat` - Bongo Cat '
+                'embed')
+        await ctx.send(cmds)
 
-    @testExtension.subcommand(sub_cmd_name='testembed',
+    @testExtension.subcommand(sub_cmd_name='test_embed',
                               sub_cmd_description='Command to create an embed')
     async def testEmbed(self, ctx: SlashContext):
         embed = Embed(
@@ -27,7 +30,7 @@ class TestExtension(Extension):
         embed.add_field('Search', '[Google](https://www.google.com/)', inline=True)
         await ctx.send(embeds=embed)
 
-    @testExtension.subcommand(sub_cmd_name='testhyperlink',
+    @testExtension.subcommand(sub_cmd_name='test_hyperlink',
                               sub_cmd_description='Command to create a body of text with Hyperlink')
     async def testHyperLink(self, ctx: SlashContext):
         await ctx.send('Go to [Google](https://www.google.com/)')
