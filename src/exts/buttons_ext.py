@@ -12,7 +12,7 @@ class Buttons(Extension):
     async def buttonExtension(self, ctx: SlashContext):
         cmds = (
             '`button_info` - List of all the functions under the buttons group\n`button_simple` - Testing default '
-            'button\n')
+            'button\n`button_many` 0 Testing many many buttons and layouts')
         await ctx.send(cmds)
 
     @buttonExtension.subcommand(sub_cmd_name='button_simple',
