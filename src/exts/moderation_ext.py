@@ -1,7 +1,8 @@
 import interactions
 from interactions import Extension, slash_command, SlashContext, OptionType, slash_option, AutocompleteContext, Member, \
-    Guild, Role
+    Role, Task, DateTrigger, Guild
 import src.credentials as credentials
+from datetime import datetime, timedelta
 
 
 class ModerationExtension(Extension):
@@ -53,8 +54,44 @@ class ModerationExtension(Extension):
                   opt_type=OptionType.ROLE,
                   required=True)
     async def switch_role(self, ctx: SlashContext, user: Member, role: Role):
-        print(f'Current Roles: {user.roles}')
-        await user.remove_roles(roles=user.roles, reason='Removing all roles for new role')
-        await user.add_role(role)
-        print(f'New Rules: {user.roles}')
-        await ctx.send('Role Switched!')
+        try:
+            print(f'Current Roles: {user.roles}')
+            await user.remove_roles(roles=user.roles, reason='Removing all roles for new role')
+            await user.add_role(role)
+            print(f'New Rules: {user.roles}')
+            await ctx.send('Role Switched!')
+        except:
+            await ctx.send('Something went wrong! Role failed to switch')
+
+    @mod_extension.subcommand(sub_cmd_name='start_timer',
+                              sub_cmd_description='Start a Timer',
+                              )
+    @slash_option(name='time',
+                  description='Duration to be banned',
+                  opt_type=OptionType.STRING,
+                  required=True,
+                  autocomplete=True)
+    async def trigger_delay(self, ctx: SlashContext, time: str):
+        seconds = {
+            '15s': 15,
+            '1m': 60,
+            '1d': 86400
+        }
+        current_datetime = datetime.now()
+        new_datetime = current_datetime + timedelta(seconds=seconds.get(time, 0))
+        task = Task(self.start_timer, DateTrigger(new_datetime))
+        task.start()
+        await ctx.send(f'Timer started at {current_datetime}. Timer Expiring at {new_datetime}')
+
+    @trigger_delay.autocomplete('time')
+    async def autocomplete(self, ctx: AutocompleteContext):
+        user_input = ctx.input_text
+        durations = ['15s', '1m', '1d']
+
+        filtered_choices = [entry for entry in durations if entry.startswith(user_input)][:25]
+
+        await ctx.send(choices=filtered_choices)
+
+    async def start_timer(self):
+        channel = await self.client.fetch_channel('1117168088148873318')
+        await channel.send('Timer Expired!')
