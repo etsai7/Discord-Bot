@@ -1,8 +1,9 @@
 import interactions
 import credentials
 
-intents = interactions.Intents.DEFAULT | interactions.Intents.MESSAGE_CONTENT
-client = interactions.Client(intents=intents, description="Testing Description")
+# intents = interactions.Intents.DEFAULT | interactions.Intents.MESSAGE_CONTENT
+intents = interactions.Intents.AUTO_MOD | interactions.Intents.GUILD_MODERATION | interactions.Intents.GUILDS
+client = interactions.Client(intents=intents, description="Testing Description", send_command_tracebacks=False)
 item_suggestions = None
 
 
