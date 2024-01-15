@@ -156,5 +156,5 @@ class ModerationExtension(Extension):
         await ctx.send(choices=filtered_choices)
 
     async def start_timer(self):
-        channel = await self.client.fetch_channel('1117168088148873318')
+        channel = await self.client.fetch_channel(credentials.channel_id_testing)
         await channel.send('Timer Expired!')
