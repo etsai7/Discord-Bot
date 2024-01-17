@@ -19,5 +19,8 @@ async def on_ready():
 client.load_extension("exts.hypixel_ext")
 client.load_extension("exts.test_ext")
 client.load_extension("exts.buttons_ext")
-client.load_extension("exts.moderation_ext")
+client.load_extension("exts.moderation.moderation_ext")
+client.load_extension("exts.moderation.cmds.switch_role")
+client.load_extension("exts.moderation.cmds.ban")
+
 client.start(credentials.discord_bot_token)
