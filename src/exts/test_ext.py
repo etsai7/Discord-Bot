@@ -1,5 +1,7 @@
-from interactions import Extension, slash_command, SlashContext, Embed, EmbedFooter, Timestamp, Color
+from interactions import Extension, slash_command, SlashContext, Embed, EmbedFooter, Timestamp, Color, Task, DateTrigger
 import src.credentials as credentials
+from src.exts.tasks.generic_task import GenericTask
+from datetime import datetime, timedelta
 
 
 class TestExtension(Extension):
@@ -51,3 +53,10 @@ class TestExtension(Extension):
         embed.set_thumbnail('https://media2.giphy.com/media/sthmCnCpfr8M8jtTQy/giphy.gif')
         embed.add_field('*Bing Bong*', 'Bongo Cat at your service')
         await ctx.send(embeds=embed)
+
+    @testExtension.subcommand(sub_cmd_name='delay',
+                              sub_cmd_description='Command to test a Task delay from another class')
+    async def testDelayedTask(self, ctx: SlashContext):
+        task = GenericTask(self.client, ctx)
+        Task(callback=task.send_msg_delayed, trigger=DateTrigger(datetime.now() + timedelta(seconds=15))).start()
+        await ctx.send('Starting Delay')
