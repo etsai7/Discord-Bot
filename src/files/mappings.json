@@ -3736,6 +3736,14 @@
         "value": "Ice Cube"
     },
     {
+        "name": "Prismarine Necklace",
+        "value": "Prismarine Necklace"
+    },
+    {
+        "name": "Sponge Belt",
+        "value": "Sponge Belt"
+    },
+    {
         "name": "Medium Gemstone Sack",
         "value": "Medium Gemstone Sack"
     },
@@ -3912,6 +3920,14 @@
         "value": "Jumbo Backpack"
     },
     {
+        "name": "Clownfish Cloak",
+        "value": "Clownfish Cloak"
+    },
+    {
+        "name": "Clay Bracelet",
+        "value": "Clay Bracelet"
+    },
+    {
         "name": "Great Spook Necklace",
         "value": "Great Spook Necklace"
     },
@@ -4010,6 +4026,10 @@
     {
         "name": "Colossal Experience Bottle Upgrade",
         "value": "Colossal Experience Bottle Upgrade"
+    },
+    {
+        "name": "Kat Bouquet",
+        "value": "Kat Bouquet"
     },
     {
         "name": "Ultimate Carrot Candy Upgrade",
@@ -16226,6 +16246,10 @@
     {
         "name": "\u00a7aGreen Goblin Egg",
         "value": "\u00a7aGreen Goblin Egg"
+    },
+    {
+        "name": "Fallen Star Lozenge",
+        "value": "Fallen Star Lozenge"
     },
     {
         "name": "Sunny Side Goblin Omelette",
