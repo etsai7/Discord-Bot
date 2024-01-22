@@ -20,37 +20,40 @@ class RockPaperScissors(Extension):
         user_id = ctx.user.id
         user_name = ctx.user.display_name
 
-        if user_id in self.games:
-            embed = self.games[user_id].get("embed")
-            choices = self.games[user_id].get("buttons")
-            await ctx.send(embeds=embed, components=choices)
-        else:
+        if user_id not in self.games:
+            self.games[user_id] = {}
 
-            embed = Embed(title="Let's Play Rock Paper Scissors!",
-                          description='Rock, Paper, or Scissors?',
-                          color=Color.from_rgb(255, 102, 255),
-                          timestamp=Timestamp.now())
-            choices = [Button(
-                style=ButtonStyle.GREEN,
-                emoji='🗿',
-                custom_id=f'rock'
-            ), Button(
-                style=ButtonStyle.GREEN,
-                emoji='📃',
-                custom_id=f'paper',
-            ), Button(
-                style=ButtonStyle.GREEN,
-                emoji='✂',
-                custom_id=f'scissor',
-            )]
-            await ctx.send(embeds=embed, components=choices)
+        await ctx.send(embeds=self.build_game_embed(),
+                       components=self.build_buttons())
 
-            self.games[user_id] = {"ctx": ctx,
-                                   "buttons": choices,
-                                   "username": user_name,
-                                   "user_score": 0,
-                                   "bot_score": 0,
-                                   "tie": 0}
+        self.games[user_id] = {"ctx": ctx,
+                               "username": user_name,
+                               "user_score": 0,
+                               "bot_score": 0,
+                               "tie": 0}
+
+    def build_game_embed(self) -> Embed:
+        embed = Embed(title="Let's Play Rock Paper Scissors!",
+                      description='Rock, Paper, or Scissors?',
+                      color=Color.from_rgb(255, 102, 255),
+                      timestamp=Timestamp.now())
+
+        return embed
+
+    def build_buttons(self) -> list[Button]:
+        return [Button(
+            style=ButtonStyle.GREEN,
+            emoji='🗿',
+            custom_id=f'rock'
+        ), Button(
+            style=ButtonStyle.GREEN,
+            emoji='📃',
+            custom_id=f'paper',
+        ), Button(
+            style=ButtonStyle.GREEN,
+            emoji='✂',
+            custom_id=f'scissor',
+        )]
 
     @listen(Component)
     async def my_callback(self, event: Component):
