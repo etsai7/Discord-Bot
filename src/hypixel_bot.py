@@ -22,5 +22,6 @@ client.load_extension("exts.buttons_ext")
 client.load_extension("exts.moderation.moderation_ext")
 client.load_extension("exts.moderation.cmds.switch_role")
 client.load_extension("exts.moderation.cmds.ban")
+client.load_extension("exts.games.games_ext")
 
 client.start(credentials.discord_bot_token)
