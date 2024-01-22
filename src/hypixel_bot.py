@@ -7,6 +7,25 @@ client = interactions.Client(intents=intents, description="Testing Description",
 item_suggestions = None
 
 
+def load_extensions():
+    client.load_extension("exts.hypixel_ext")
+    client.load_extension("exts.test_ext")
+    client.load_extension("exts.buttons_ext")
+    load_moderation_exts()
+    load_games_exts()
+
+
+def load_moderation_exts():
+    client.load_extension("exts.moderation.moderation_ext")
+    client.load_extension("exts.moderation.cmds.switch_role")
+    client.load_extension("exts.moderation.cmds.ban")
+
+
+def load_games_exts():
+    client.load_extension("exts.games.games_ext")
+    client.load_extension("exts.games.rps.rock_paper_scissors")
+
+
 @interactions.listen()
 async def on_ready():
     # We can use the client "me" attribute to get information about the bot.
@@ -16,12 +35,6 @@ async def on_ready():
     print(f"Our latency is {client.latency} ms.")
 
 
-client.load_extension("exts.hypixel_ext")
-client.load_extension("exts.test_ext")
-client.load_extension("exts.buttons_ext")
-client.load_extension("exts.moderation.moderation_ext")
-client.load_extension("exts.moderation.cmds.switch_role")
-client.load_extension("exts.moderation.cmds.ban")
-client.load_extension("exts.games.games_ext")
+load_extensions()
 
 client.start(credentials.discord_bot_token)
