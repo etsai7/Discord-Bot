@@ -1,4 +1,5 @@
-from interactions import Extension, slash_command, SlashContext, Button, ButtonStyle, ActionRow
+from interactions import Extension, slash_command, SlashContext, Button, ButtonStyle, ActionRow, component_callback, \
+    ComponentContext
 import src.credentials as credentials
 import interactions.models.discord.components as cmp
 
@@ -44,7 +45,7 @@ class Buttons(Extension):
             label="Food",
             emoji='🍙',
             custom_id="2"
-        ),Button(
+        ), Button(
             style=ButtonStyle.BLUE,
             label="Sports",
             emoji='⚾',
@@ -54,7 +55,7 @@ class Buttons(Extension):
             label="Travel",
             emoji='🚄',
             custom_id="4"
-        ),Button(
+        ), Button(
             style=ButtonStyle.SECONDARY,
             label="Music",
             emoji='🎵',
@@ -67,3 +68,7 @@ class Buttons(Extension):
         ), max_in_row=4)
 
         await ctx.send(components=components)
+
+    @component_callback("1")
+    async def my_callback(self, ctx: ComponentContext):
+        await ctx.send("You clicked it!")
