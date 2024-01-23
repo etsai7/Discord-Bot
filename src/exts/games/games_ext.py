@@ -11,7 +11,7 @@ class Games(Extension):
         embed = Embed(
             title="**🎮 Available Game Commands**",
             color=Color.from_rgb(201, 234, 252),
-            footer=EmbedFooter(text='- PartBot™'),
+            footer=EmbedFooter(text='- PartyBot™'),
             timestamp=Timestamp.now())
         embed.add_field('`rps`', 'Rock Paper Scissor with the bot', inline=False)
 
