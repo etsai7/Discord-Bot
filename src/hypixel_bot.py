@@ -9,8 +9,8 @@ item_suggestions = None
 
 def load_extensions():
     client.load_extension("exts.hypixel_ext")
-    client.load_extension("exts.test_ext")
     client.load_extension("exts.buttons_ext")
+    load_test_exts()
     load_moderation_exts()
     load_games_exts()
 
@@ -19,12 +19,16 @@ def load_moderation_exts():
     client.load_extension("exts.moderation.moderation_ext")
     client.load_extension("exts.moderation.cmds.switch_role")
     client.load_extension("exts.moderation.cmds.ban")
+    client.load_extension("exts.moderation.cmds.mute")
 
 
 def load_games_exts():
     client.load_extension("exts.games.games_ext")
     client.load_extension("exts.games.rps.rock_paper_scissors")
 
+def load_test_exts():
+    client.load_extension("exts.testing.test_ext")
+    client.load_extension("exts.testing.countdown")
 
 @interactions.listen()
 async def on_ready():
