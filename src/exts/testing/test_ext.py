@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 
 
 class TestExtension(Extension):
-    @slash_command(name='testing',
+    @slash_command(name='test',
                    scopes=[credentials.discord_guild_id],
                    sub_cmd_name='test_info',
                    sub_cmd_description='Command to auto suggest a bunch of hypixel item choices')
