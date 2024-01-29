@@ -20,15 +20,18 @@ def load_moderation_exts():
     client.load_extension("exts.moderation.cmds.switch_role")
     client.load_extension("exts.moderation.cmds.ban")
     client.load_extension("exts.moderation.cmds.mute")
+    client.load_extension("exts.moderation.cmds.poll")
 
 
 def load_games_exts():
     client.load_extension("exts.games.games_ext")
     client.load_extension("exts.games.rps.rock_paper_scissors")
 
+
 def load_test_exts():
     client.load_extension("exts.testing.test_ext")
     client.load_extension("exts.testing.countdown")
+
 
 @interactions.listen()
 async def on_ready():

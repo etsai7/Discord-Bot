@@ -1,8 +1,22 @@
 import interactions
-from interactions import Extension, slash_command, SlashContext, OptionType, slash_option, AutocompleteContext, Member, \
-    Role, Task, DateTrigger, Guild, Client, User, Timestamp
+from interactions import *
 import src.credentials as credentials
 from datetime import datetime, timedelta
+
+
+def get_cmd_information():
+    return \
+        '''### `mod_info` - Gets command info under moderation
+### `start_timer` - testing for a delayed message
+- `time` - seconds to delay, limited to 3 choices
+### `ban` - Ban a specified user
+- `user` - Selected user to be banned
+### `mute`- Mutes a selected user for a specified amount of time
+- `user` - User to be muted
+- `time` - Time from now to be muted
+### `poll` - Create a poll 
+- `question` - Your question to everybody 
+- `choices` - Choices separated by g"|" and with "~" for each <emoji>~<choice> if a custom emoji is desired. 🔮~A|🎃~B|C. Limit 10'''
 
 
 class ModerationExtension(Extension):
@@ -13,9 +27,11 @@ class ModerationExtension(Extension):
                    sub_cmd_name='mod_info',
                    sub_cmd_description='Command to auto suggest a bunch of hypixel item choices')
     async def mod_extension(self, ctx: SlashContext):
-        cmds = (
-            '`mod_info` - List of all the functions under the mods group\n`ban` - Ban players for a period of time')
-        await ctx.send(cmds)
+        info_embed = Embed(title='<a:bugcat_keyboard_smash:1201337364195311616> **Mod Commands Info** '
+                                 '<a:bugcat_keyboard_smash:1201337364195311616>',
+                           description=get_cmd_information(),
+                           color=Color.from_rgb(52, 157, 219))
+        await ctx.send(embeds=info_embed)
 
     '''
         All Below are the components of the ban function. 
