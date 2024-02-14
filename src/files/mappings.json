@@ -6996,10 +6996,6 @@
         "value": "Gold Hunter Chestplate"
     },
     {
-        "name": "Bonzo Fragment",
-        "value": "Bonzo Fragment"
-    },
-    {
         "name": "Lime Stained Glass",
         "value": "Lime Stained Glass"
     },
@@ -11372,10 +11368,6 @@
         "value": "Cobblestone Slab"
     },
     {
-        "name": "Bonzo's Mask",
-        "value": "Bonzo's Mask"
-    },
-    {
         "name": "Spirit Mask",
         "value": "Spirit Mask"
     },
@@ -11446,10 +11438,6 @@
     {
         "name": "Potion Affinity Talisman",
         "value": "Potion Affinity Talisman"
-    },
-    {
-        "name": "Bonzo's Staff",
-        "value": "Bonzo's Staff"
     },
     {
         "name": "Celeste Helmet",
@@ -16440,6 +16428,10 @@
         "value": "Trapper Crest"
     },
     {
+        "name": "Bone Necklace",
+        "value": "Bone Necklace"
+    },
+    {
         "name": "Spirit Leap",
         "value": "Spirit Leap"
     },
@@ -16458,6 +16450,10 @@
     {
         "name": "Shadow Assassin Cloak",
         "value": "Shadow Assassin Cloak"
+    },
+    {
+        "name": "Bonzo Fragment",
+        "value": "Bonzo Fragment"
     },
     {
         "name": "Bouquet of Lies",
@@ -16480,12 +16476,16 @@
         "value": "Adaptive Belt"
     },
     {
-        "name": "Bone Necklace",
-        "value": "Bone Necklace"
-    },
-    {
         "name": "Giant's Eye Sword",
         "value": "Giant's Eye Sword"
+    },
+    {
+        "name": "Bonzo's Mask",
+        "value": "Bonzo's Mask"
+    },
+    {
+        "name": "Bonzo's Staff",
+        "value": "Bonzo's Staff"
     },
     {
         "name": "General's Medallion",
