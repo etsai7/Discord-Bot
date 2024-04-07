@@ -3172,6 +3172,10 @@
         "value": "White Tiger Minion Skin"
     },
     {
+        "name": "Rose Dye",
+        "value": "Rose Dye"
+    },
+    {
         "name": "Warden Dye",
         "value": "Warden Dye"
     },
@@ -4408,6 +4412,10 @@
         "value": "10th Anniversary Podium"
     },
     {
+        "name": "Egg Painting Station",
+        "value": "Egg Painting Station"
+    },
+    {
         "name": "Floral Wheelbarrow",
         "value": "Floral Wheelbarrow"
     },
@@ -4450,6 +4458,10 @@
     {
         "name": "Halloween Scarecrow",
         "value": "Halloween Scarecrow"
+    },
+    {
+        "name": "Little Chick Tea Table",
+        "value": "Little Chick Tea Table"
     },
     {
         "name": "Hanging Reaper",
@@ -4504,12 +4516,20 @@
         "value": "Greenhouse Planter"
     },
     {
+        "name": "Little Chick Dresser",
+        "value": "Little Chick Dresser"
+    },
+    {
         "name": "Skeleton Statue",
         "value": "Skeleton Statue"
     },
     {
         "name": "Small Pool",
         "value": "Small Pool"
+    },
+    {
+        "name": "Bunny Bench",
+        "value": "Bunny Bench"
     },
     {
         "name": "Flamingo Float",
@@ -4522,6 +4542,10 @@
     {
         "name": "Bear Bookshelf",
         "value": "Bear Bookshelf"
+    },
+    {
+        "name": "Little Chick Bed",
+        "value": "Little Chick Bed"
     },
     {
         "name": "Holiday Train",
@@ -7530,6 +7554,10 @@
     {
         "name": "Mycelium Dust",
         "value": "Mycelium Dust"
+    },
+    {
+        "name": "Locked Ballot Box",
+        "value": "Locked Ballot Box"
     },
     {
         "name": "Concentrated Stone",
@@ -15184,6 +15212,10 @@
         "value": "Cricket Choir Vinyl"
     },
     {
+        "name": "Portable Washer",
+        "value": "Portable Washer"
+    },
+    {
         "name": "Plant Matter",
         "value": "Plant Matter"
     },
@@ -16450,6 +16482,10 @@
     {
         "name": "Shadow Assassin Cloak",
         "value": "Shadow Assassin Cloak"
+    },
+    {
+        "name": "Architect's First Draft",
+        "value": "Architect's First Draft"
     },
     {
         "name": "Bonzo Fragment",
