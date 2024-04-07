@@ -3,6 +3,7 @@ import credentials
 
 # intents = interactions.Intents.DEFAULT | interactions.Intents.MESSAGE_CONTENT
 intents = interactions.Intents.AUTO_MOD | interactions.Intents.GUILD_MODERATION | interactions.Intents.GUILDS | interactions.Intents.MESSAGE_CONTENT | interactions.Intents.MESSAGES
+# intents = interactions.Intents.ALL
 client = interactions.Client(intents=intents, description="Testing Description", send_command_tracebacks=False)
 item_suggestions = None
 
@@ -22,6 +23,7 @@ def load_moderation_exts():
     client.load_extension("exts.moderation.cmds.mute")
     client.load_extension("exts.moderation.cmds.poll")
     client.load_extension("exts.moderation.cmds.reacts")
+    client.load_extension("exts.moderation.cmds.dm")
 
 
 def load_games_exts():
