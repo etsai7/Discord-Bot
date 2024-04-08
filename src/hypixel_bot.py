@@ -24,6 +24,7 @@ def load_moderation_exts():
     client.load_extension("exts.moderation.cmds.poll")
     client.load_extension("exts.moderation.cmds.reacts")
     client.load_extension("exts.moderation.cmds.dm")
+    client.load_extension("exts.moderation.cmds.snipe")
 
 
 def load_games_exts():
