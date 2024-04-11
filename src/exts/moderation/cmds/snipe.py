@@ -12,8 +12,12 @@ class Snipe(Extension):
 
     @ModerationExtension.mod_extension.subcommand(sub_cmd_name='snipe',
                                                   sub_cmd_description='Retrieve the last deleted message')
-    async def snipe(self, ctx: SlashContext):
-        msg = None if len(self.stored_messages) <= 0 else self.stored_messages[0].content
+    @slash_option(name='last',
+                  description='Last x message to snipe',
+                  opt_type=OptionType.INTEGER,
+                  required=False)
+    async def snipe(self, ctx: SlashContext, last: int = 1):
+        msg = None if len(self.stored_messages) <= last else self.stored_messages[last - 1].content
         await ctx.send(f'Last Message: {msg}')
 
     @listen(MessageUpdate)
