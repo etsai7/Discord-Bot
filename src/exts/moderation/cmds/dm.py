@@ -1,10 +1,11 @@
 from interactions import *
 from src.exts.moderation.moderation_ext import ModerationExtension
 
+
 class DM(Extension):
 
     @ModerationExtension.mod_extension.subcommand(sub_cmd_name='dm',
-                                                  sub_cmd_description='Actually banning someone')
+                                                  sub_cmd_description='DM-ing a specified user')
     @slash_option(name='user',
                   description='The user to be banned',
                   opt_type=OptionType.USER,
@@ -16,6 +17,7 @@ class DM(Extension):
     async def dm(self, ctx: SlashContext, user: User, msg: str):
         await user.send(msg)
         await ctx.send(f'Message sent!')
+
 
 def setup(bot):
     DM(bot)
