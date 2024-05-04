@@ -58,6 +58,10 @@ class RockPaperScissors(Extension):
         if user_id not in self.games:
             self.add_new_player(user_id, user_name)
 
+        # Prevent overlaps with other buttons from other commands. Skip if id isn't valid
+        if user_choice not in self.choices:
+            return
+
         user_score = self.games.get(user_id, {}).get("user_score", 0)
         bot_score = self.games.get(user_id, {}).get("bot_score", 0)
         tie = self.games.get(user_id, {}).get("tie", 0)
