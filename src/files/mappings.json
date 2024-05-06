@@ -60,6 +60,10 @@
         "value": "Luxurious Spool"
     },
     {
+        "name": "Glacite Shard",
+        "value": "Glacite Shard"
+    },
+    {
         "name": "Hazmat Enderman",
         "value": "Hazmat Enderman"
     },
@@ -3740,6 +3744,50 @@
         "value": "Complete Century Cake Bundle"
     },
     {
+        "name": "Prestige Chocolate Realm",
+        "value": "Prestige Chocolate Realm"
+    },
+    {
+        "name": "Rich Chocolate Chunk",
+        "value": "Rich Chocolate Chunk"
+    },
+    {
+        "name": "Nibble Chocolate Stick",
+        "value": "Nibble Chocolate Stick"
+    },
+    {
+        "name": "Ganache Chocolate Slab",
+        "value": "Ganache Chocolate Slab"
+    },
+    {
+        "name": "Smooth Chocolate Bar",
+        "value": "Smooth Chocolate Bar"
+    },
+    {
+        "name": "Chocolate Syringe",
+        "value": "Chocolate Syringe"
+    },
+    {
+        "name": "Zorro's Cape",
+        "value": "Zorro's Cape"
+    },
+    {
+        "name": "Supreme Chocolate Bar",
+        "value": "Supreme Chocolate Bar"
+    },
+    {
+        "name": "Refined Dark Cacao Truffle",
+        "value": "Refined Dark Cacao Truffle"
+    },
+    {
+        "name": "Egglocator",
+        "value": "Egglocator"
+    },
+    {
+        "name": "Dark Cacao Truffle",
+        "value": "Dark Cacao Truffle"
+    },
+    {
         "name": "Ice Cube",
         "value": "Ice Cube"
     },
@@ -3754,6 +3802,46 @@
     {
         "name": "Medium Gemstone Sack",
         "value": "Medium Gemstone Sack"
+    },
+    {
+        "name": "Fine Onyx Gemstone",
+        "value": "Fine Onyx Gemstone"
+    },
+    {
+        "name": "Perfect Onyx Gemstone",
+        "value": "Perfect Onyx Gemstone"
+    },
+    {
+        "name": "Rough Onyx Gemstone",
+        "value": "Rough Onyx Gemstone"
+    },
+    {
+        "name": "Flawless Onyx Gemstone",
+        "value": "Flawless Onyx Gemstone"
+    },
+    {
+        "name": "Flawed Onyx Gemstone",
+        "value": "Flawed Onyx Gemstone"
+    },
+    {
+        "name": "Perfect Peridot Gemstone",
+        "value": "Perfect Peridot Gemstone"
+    },
+    {
+        "name": "Fine Peridot Gemstone",
+        "value": "Fine Peridot Gemstone"
+    },
+    {
+        "name": "Flawless Peridot Gemstone",
+        "value": "Flawless Peridot Gemstone"
+    },
+    {
+        "name": "Flawed Peridot Gemstone",
+        "value": "Flawed Peridot Gemstone"
+    },
+    {
+        "name": "Rough Peridot Gemstone",
+        "value": "Rough Peridot Gemstone"
     },
     {
         "name": "Fine Jasper Gemstone",
@@ -3774,6 +3862,26 @@
     {
         "name": "Flawless Jasper Gemstone",
         "value": "Flawless Jasper Gemstone"
+    },
+    {
+        "name": "Flawed Aquamarine Gemstone",
+        "value": "Flawed Aquamarine Gemstone"
+    },
+    {
+        "name": "Rough Aquamarine Gemstone",
+        "value": "Rough Aquamarine Gemstone"
+    },
+    {
+        "name": "Fine Aquamarine Gemstone",
+        "value": "Fine Aquamarine Gemstone"
+    },
+    {
+        "name": "Flawless Aquamarine Gemstone",
+        "value": "Flawless Aquamarine Gemstone"
+    },
+    {
+        "name": "Perfect Aquamarine Gemstone",
+        "value": "Perfect Aquamarine Gemstone"
     },
     {
         "name": "Fine Amethyst Gemstone",
@@ -3842,6 +3950,26 @@
     {
         "name": "Flawless Amber Gemstone",
         "value": "Flawless Amber Gemstone"
+    },
+    {
+        "name": "Flawless Citrine Gemstone",
+        "value": "Flawless Citrine Gemstone"
+    },
+    {
+        "name": "Fine Citrine Gemstone",
+        "value": "Fine Citrine Gemstone"
+    },
+    {
+        "name": "Perfect Citrine Gemstone",
+        "value": "Perfect Citrine Gemstone"
+    },
+    {
+        "name": "Flawed Citrine Gemstone",
+        "value": "Flawed Citrine Gemstone"
+    },
+    {
+        "name": "Rough Citrine Gemstone",
+        "value": "Rough Citrine Gemstone"
     },
     {
         "name": "Extra Large Gemstone Sack",
@@ -4678,6 +4806,10 @@
     {
         "name": "Portal to the Crystal Nucleus",
         "value": "Portal to the Crystal Nucleus"
+    },
+    {
+        "name": "Portal to the Dwarven Base Camp",
+        "value": "Portal to the Dwarven Base Camp"
     },
     {
         "name": "Portal to Dragontail",
@@ -5952,8 +6084,8 @@
         "value": "Pumpkin"
     },
     {
-        "name": "Helix",
-        "value": "Helix"
+        "name": "Helix Fossil",
+        "value": "Helix Fossil"
     },
     {
         "name": "X Mithril Powder",
@@ -6006,6 +6138,10 @@
     {
         "name": "Black Widow Skin",
         "value": "Black Widow Skin"
+    },
+    {
+        "name": "Vanguard Chestplate",
+        "value": "Vanguard Chestplate"
     },
     {
         "name": "Heat Helmet",
@@ -6746,6 +6882,10 @@
     {
         "name": "Dandelion",
         "value": "Dandelion"
+    },
+    {
+        "name": "Fossil the Fish",
+        "value": "Fossil the Fish"
     },
     {
         "name": "%%green%%Swappable Preview %%gray%%(Click)",
@@ -7660,8 +7800,8 @@
         "value": "Spruce Wood Plank"
     },
     {
-        "name": "Enchanted Block of Coal",
-        "value": "Enchanted Block of Coal"
+        "name": "Enchanted Coal Block",
+        "value": "Enchanted Coal Block"
     },
     {
         "name": "Sword of the Stars 9000",
@@ -9336,8 +9476,8 @@
         "value": "Last Breath"
     },
     {
-        "name": "Amber-polished Drill Engine",
-        "value": "Amber-polished Drill Engine"
+        "name": "Amber-Polished Drill Engine",
+        "value": "Amber-Polished Drill Engine"
     },
     {
         "name": "Broken Handle",
@@ -10384,6 +10524,10 @@
         "value": "Watcher Eye"
     },
     {
+        "name": "Vanguard Helmet",
+        "value": "Vanguard Helmet"
+    },
+    {
         "name": "Orange Dye",
         "value": "Orange Dye"
     },
@@ -11412,8 +11556,8 @@
         "value": "Yoggie"
     },
     {
-        "name": "Sapphire-polished Drill Engine",
-        "value": "Sapphire-polished Drill Engine"
+        "name": "Sapphire-Polished Drill Engine",
+        "value": "Sapphire-Polished Drill Engine"
     },
     {
         "name": "Paper",
@@ -12130,6 +12274,10 @@
     {
         "name": "Gemstone Mixture",
         "value": "Gemstone Mixture"
+    },
+    {
+        "name": "Vanguard Leggings",
+        "value": "Vanguard Leggings"
     },
     {
         "name": "Iron Door",
@@ -13408,6 +13556,10 @@
         "value": "Creative Mind"
     },
     {
+        "name": "Vanguard Boots",
+        "value": "Vanguard Boots"
+    },
+    {
         "name": "Zombie Talisman",
         "value": "Zombie Talisman"
     },
@@ -13708,8 +13860,8 @@
         "value": "Storm's Chestplate"
     },
     {
-        "name": "Onyx",
-        "value": "Onyx"
+        "name": "Black Diamond",
+        "value": "Black Diamond"
     },
     {
         "name": "Wooden Pressure Plate",
@@ -13788,8 +13940,8 @@
         "value": "Endstone Rose"
     },
     {
-        "name": "Ruby-polished Drill Engine",
-        "value": "Ruby-polished Drill Engine"
+        "name": "Ruby-Polished Drill Engine",
+        "value": "Ruby-Polished Drill Engine"
     },
     {
         "name": "Fire Flower Tool",
@@ -14364,8 +14516,8 @@
         "value": "Gyrokinetic Wand"
     },
     {
-        "name": "Exceedingly Rare Ender Artifact Upgrader",
-        "value": "Exceedingly Rare Ender Artifact Upgrader"
+        "name": "Exceedingly Rare Ender Artifact Upgrade",
+        "value": "Exceedingly Rare Ender Artifact Upgrade"
     },
     {
         "name": "Sinful Dice",
@@ -14812,6 +14964,170 @@
         "value": "Tropical Bird 1 Minion Skin"
     },
     {
+        "name": "Tungsten Key",
+        "value": "Tungsten Key"
+    },
+    {
+        "name": "Refined Tungsten",
+        "value": "Refined Tungsten"
+    },
+    {
+        "name": "Tungsten",
+        "value": "Tungsten"
+    },
+    {
+        "name": "Tungsten Plate",
+        "value": "Tungsten Plate"
+    },
+    {
+        "name": "Enchanted Tungsten",
+        "value": "Enchanted Tungsten"
+    },
+    {
+        "name": "Suspicious Scrap",
+        "value": "Suspicious Scrap"
+    },
+    {
+        "name": "Refined Umber",
+        "value": "Refined Umber"
+    },
+    {
+        "name": "Umber",
+        "value": "Umber"
+    },
+    {
+        "name": "Enchanted Umber",
+        "value": "Enchanted Umber"
+    },
+    {
+        "name": "Umber Plate",
+        "value": "Umber Plate"
+    },
+    {
+        "name": "Umber Key",
+        "value": "Umber Key"
+    },
+    {
+        "name": "Citrine Crystal",
+        "value": "Citrine Crystal"
+    },
+    {
+        "name": "Aquamarine Crystal",
+        "value": "Aquamarine Crystal"
+    },
+    {
+        "name": "Opal Crystal",
+        "value": "Opal Crystal"
+    },
+    {
+        "name": "Peridot Crystal",
+        "value": "Peridot Crystal"
+    },
+    {
+        "name": "Onyx Crystal",
+        "value": "Onyx Crystal"
+    },
+    {
+        "name": "Ugly Fossil",
+        "value": "Ugly Fossil"
+    },
+    {
+        "name": "Spine Fossil",
+        "value": "Spine Fossil"
+    },
+    {
+        "name": "Clubbed Fossil",
+        "value": "Clubbed Fossil"
+    },
+    {
+        "name": "Tusk Fossil",
+        "value": "Tusk Fossil"
+    },
+    {
+        "name": "Footprint Fossil",
+        "value": "Footprint Fossil"
+    },
+    {
+        "name": "Claw Fossil",
+        "value": "Claw Fossil"
+    },
+    {
+        "name": "Webbed Fossil",
+        "value": "Webbed Fossil"
+    },
+    {
+        "name": "Secret Railroad Pass",
+        "value": "Secret Railroad Pass"
+    },
+    {
+        "name": "Dwarven Metal Talisman",
+        "value": "Dwarven Metal Talisman"
+    },
+    {
+        "name": "Skeleton Key",
+        "value": "Skeleton Key"
+    },
+    {
+        "name": "Shattered Locket",
+        "value": "Shattered Locket"
+    },
+    {
+        "name": "Tungsten Regulator",
+        "value": "Tungsten Regulator"
+    },
+    {
+        "name": "Pendant of Divan",
+        "value": "Pendant of Divan"
+    },
+    {
+        "name": "Relic of Power",
+        "value": "Relic of Power"
+    },
+    {
+        "name": "Portable Campfire",
+        "value": "Portable Campfire"
+    },
+    {
+        "name": "Perfect Plate",
+        "value": "Perfect Plate"
+    },
+    {
+        "name": "Dwarven Handwarmers",
+        "value": "Dwarven Handwarmers"
+    },
+    {
+        "name": "Frigid Husk",
+        "value": "Frigid Husk"
+    },
+    {
+        "name": "Glacite",
+        "value": "Glacite"
+    },
+    {
+        "name": "Glacite Amalgamation",
+        "value": "Glacite Amalgamation"
+    },
+    {
+        "name": "Enchanted Glacite",
+        "value": "Enchanted Glacite"
+    },
+    {
+        "name": "Reinforced Chisel",
+        "value": "Reinforced Chisel"
+    },
+    {
+        "name": "Perfect Chisel",
+        "value": "Perfect Chisel"
+    },
+    {
+        "name": "Glacite-Plated Chisel",
+        "value": "Glacite-Plated Chisel"
+    },
+    {
+        "name": "Chisel",
+        "value": "Chisel"
+    },
+    {
         "name": "Travel Scroll to Dragontail",
         "value": "Travel Scroll to Dragontail"
     },
@@ -14822,6 +15138,10 @@
     {
         "name": "Travel Scroll to Museum",
         "value": "Travel Scroll to Museum"
+    },
+    {
+        "name": "Travel Scroll to the Dwarven Base Camp",
+        "value": "Travel Scroll to the Dwarven Base Camp"
     },
     {
         "name": "Travel Scroll to Deep Caverns",
@@ -17194,5 +17514,13 @@
     {
         "name": "Eccentric Painting Bundle",
         "value": "Eccentric Painting Bundle"
+    },
+    {
+        "name": "Magic 8 Ball",
+        "value": "Magic 8 Ball"
+    },
+    {
+        "name": "Sirius' Personal Phone Number",
+        "value": "Sirius' Personal Phone Number"
     }
 ]
