@@ -2,6 +2,7 @@ from interactions import *
 from interactions.api.events import MessageDelete, MessageUpdate, Component
 
 from src.exts.moderation.moderation_ext import ModerationExtension
+from PIL import Image, ImageDraw, ImageFont
 
 
 class Snipe(Extension):
@@ -113,6 +114,50 @@ class Snipe(Extension):
     def find_user(self, user: str, ctx: ComponentContext):
         for users in ctx.channel.members:
             print(f'Given: {user}, find User: {users.display_name}')
+
+    @ModerationExtension.mod_extension.subcommand(sub_cmd_name='quote_to_img',
+                                                  sub_cmd_description='Converte a Quote to an Image')
+    @slash_option(name='quote',
+                  description='Quote',
+                  opt_type=OptionType.STRING,
+                  required=True)
+    async def convert_quote_to_img(self, ctx: SlashContext, quote: str) -> None:
+        self.generate_quote_img(quote)
+        file = File(file=r"./exts/moderation/outputs/quote.jpg", file_name="quote.jpg")
+        embed = Embed(title='Quote to Image', description="Quote Embed")
+        embed.set_image('attachment://exts/moderation/outputs/quote.jpg')
+        await ctx.send(files=file)
+
+    def generate_quote_img(self, quote: str):
+        # Define image properties
+        width, height = 300, 200
+        background_color = ( 204, 213, 174)  # White background color
+        text_color = (212, 163, 115)  # Black text color
+        text = quote
+
+        # Create a new image with the specified background color
+        image = Image.new("RGB", (width, height), background_color)
+
+        # Initialize the drawing context
+        draw = ImageDraw.Draw(image)
+
+        # Define a font (change the path to a font file on your system)
+        font = ImageFont.truetype("arial.ttf", 30)
+
+        # Calculate text size and position
+
+        text_width = draw.textlength(text, font=font)
+        text_height = font.size
+        x = (width - text_width) // 2
+        y = (height - text_height) // 2
+
+        # Draw the text on the image
+        draw.text((x, y), text, fill=text_color, font=font)
+
+        image.show()
+        # Save the image as JPEG or PNG
+        image.save("./exts/moderation/outputs/quote.jpg")  # Save as JPEG
+        # image.save("output.png")  # Save as PNG
 
 
 def setup(bot):
