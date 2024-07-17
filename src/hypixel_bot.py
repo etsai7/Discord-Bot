@@ -1,11 +1,25 @@
 import interactions
 import credentials
+import sqlite3
 
 # intents = interactions.Intents.DEFAULT | interactions.Intents.MESSAGE_CONTENT
 intents = interactions.Intents.AUTO_MOD | interactions.Intents.GUILD_MODERATION | interactions.Intents.GUILDS | interactions.Intents.MESSAGE_CONTENT | interactions.Intents.MESSAGES
 # intents = interactions.Intents.ALL
 client = interactions.Client(intents=intents, description="Testing Description", send_command_tracebacks=False)
 item_suggestions = None
+
+connection = sqlite3.connect("data.db")
+cursor = connection.cursor()
+
+
+def handle_db():
+    create_table_query = '''CREATE TABLE If NOT EXISTS points (
+                          User TEXT PRIMARY KEY,
+                          Points INTEGER
+                      )'''
+    cursor.execute(create_table_query)
+    client.db = cursor
+    client.conn = connection
 
 
 def load_extensions():
@@ -45,7 +59,7 @@ async def on_ready():
     # We're also able to use property methods to gather additional data.
     print(f"Our latency is {client.latency} ms.")
 
-
+handle_db()
 load_extensions()
 
 client.start(credentials.discord_bot_token)
