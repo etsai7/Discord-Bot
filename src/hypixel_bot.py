@@ -28,6 +28,7 @@ def load_extensions():
     load_test_exts()
     load_moderation_exts()
     load_games_exts()
+    load_points_exts()
 
 
 def load_moderation_exts():
@@ -39,6 +40,11 @@ def load_moderation_exts():
     client.load_extension("exts.moderation.cmds.reacts")
     client.load_extension("exts.moderation.cmds.dm")
     client.load_extension("exts.moderation.cmds.snipe")
+
+
+def load_points_exts():
+    client.load_extension("exts.points.points_ext")
+    client.load_extension("exts.points.points.points_cmds")
 
 
 def load_games_exts():
