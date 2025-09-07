@@ -22,7 +22,7 @@ def get_cmd_information():
 class ModerationExtension(Extension):
 
     @slash_command(name="moderation",
-                   scopes=[credentials.discord_guild_id],
+                   scopes=[credentials.discord_guild_id, credentials.discord_nonsense_guild_id],
                    default_member_permissions=interactions.Permissions.ADMINISTRATOR,
                    sub_cmd_name='mod_info',
                    sub_cmd_description='Command to auto suggest a bunch of hypixel item choices')
