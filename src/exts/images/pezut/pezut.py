@@ -1,5 +1,6 @@
 import math
 import os
+from email.policy import default
 
 from interactions import Extension, slash_command, SlashContext, slash_option, OptionType
 from PIL import Image, ImageChops, ImageFont, ImageDraw
@@ -143,18 +144,21 @@ class Pezut(Extension):
                   description="Red in RGB",
                   opt_type=OptionType.INTEGER,
                   min_value=0,
-                  max_value=255)
+                  max_value=255,
+                  required=False)
     @slash_option(name="g",
                   description="Green in RGB",
                   opt_type=OptionType.INTEGER,
                   min_value=0,
-                  max_value=255)
+                  max_value=255,
+                  required=False)
     @slash_option(name="b",
                   description="Blue in RGB",
                   opt_type=OptionType.INTEGER,
                   min_value=0,
-                  max_value=255)
-    async def pezut_generator(self, ctx: SlashContext, letter1: str, letter2: str, r: int, g: int, b: int) -> None:
+                  max_value=255,
+                  required=False)
+    async def pezut_generator(self, ctx: SlashContext, letter1: str, letter2: str, r: int = 255, g: int = 0, b: int = 0) -> None:
         base_image = Image.open('./exts/images/pezut/resources/images/Base.png').convert("RGBA")
         if r is None or g is None or b is None:
             color = (255, 0, 0, 100)
