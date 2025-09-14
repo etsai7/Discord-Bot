@@ -14,6 +14,7 @@ def load_extensions():
     load_test_exts()
     load_moderation_exts()
     load_games_exts()
+    load_images_exts()
 
 
 def load_moderation_exts():
@@ -36,6 +37,8 @@ def load_test_exts():
     client.load_extension("exts.testing.test_ext")
     client.load_extension("exts.testing.countdown")
 
+def load_images_exts():
+    client.load_extension("exts.images.pezut.pezut")
 
 @interactions.listen()
 async def on_ready():
