@@ -148,7 +148,7 @@ def main():
 
     if result_image:
         # Display the result
-        result_image.show()
+        # result_image.show()
         return result_image
     else:
         print("Failed to create the image")
@@ -166,11 +166,10 @@ def create_custom_cube(left_letter, right_letter, base_image):
     """
 
 
-
     result_image = add_letters_to_cube("", left_letter, right_letter, base_image)
 
     if result_image:
-        result_image.show()
+        # result_image.show()
         return result_image
     else:
         print("Failed to create the image")

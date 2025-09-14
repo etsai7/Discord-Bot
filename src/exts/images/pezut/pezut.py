@@ -1,4 +1,5 @@
 import math
+import os
 
 from interactions import Extension, slash_command, SlashContext, slash_option, OptionType
 from PIL import Image, ImageChops, ImageFont, ImageDraw
@@ -154,7 +155,7 @@ class Pezut(Extension):
                   min_value=0,
                   max_value=255)
     async def pezut_generator(self, ctx: SlashContext, letter1: str, letter2: str, r: int, g: int, b: int) -> None:
-        base_image = Image.open('./src/exts/images/pezut/resources/images/Base.png').convert("RGBA")
+        base_image = Image.open('./exts/images/pezut/resources/images/Base.png').convert("RGBA")
         if r is None or g is None or b is None:
             color = (255, 0, 0, 100)
         else:
@@ -162,19 +163,20 @@ class Pezut(Extension):
         zut_overlay = Image.new("RGBA", base_image.size, color)
         blended = Image.alpha_composite(base_image, zut_overlay)
 
-        blek = Image.open('./src/exts/images/pezut/resources/images/Blek.png').convert("RGBA").resize(base_image.size)
+        blek = Image.open('./exts/images/pezut/resources/images/Blek.png').convert("RGBA").resize(base_image.size)
 
         cube = ImageChops.subtract(blended, blek)
 
-        font = ImageFont.load_default(size=175)
-
-        W, H = cube.size
-
+        output_path = './exts/images/pezut/outputs/images/pezut.png'
         cube = self.helper_function(letter1, letter2, cube)
-        cube.save('./outputs/images/pezut.png')
-        await ctx.send(file=r"./outputs/images/pezut.png", filename="pezut.png")
 
+        try:
+            cube.save(output_path)
+        except FileNotFoundError as e:
+            os.makedirs(os.path.dirname(output_path), exist_ok=True)
+            cube.save(output_path)
 
+        await ctx.send(file=output_path, filename="pezut.png")
 
 
 
